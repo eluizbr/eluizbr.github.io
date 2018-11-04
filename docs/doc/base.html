@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <!-- <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/gif" sizes="16x16"> -->
+
+    <title>Patrimar Dashboard</title>
+    <!-- GLOBAL MAINLY STYLES-->
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/font-awesome-pro/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/line-awesome/css/line-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/datepicker/css/bootstrap-datepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-select/css/bootstrap-select.min.css' %}">
+
+    {% block extra_css %}{% endblock %}
+
+
+    <!-- THEME STYLES-->
+    <link rel="stylesheet" href="{% static 'css/common/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common/sidemenu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common/list_views.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common/modal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+
+</head>
+
+<!-- <body class="fixed-navbar has-animation sidebar-mini"> -->
+
+<body class="fixed-navbar has-animation fixed-layout sidebar-mini">
+    <div class="page-wrapper">
+        <!-- START HEADER-->
+        <header class="header">
+            <div class="page-brand">
+                <a href="#">
+                    <span class="brand">PATRIMAR</span>
+                    <a><i class="fal fa-browser"></i></a>
+                </a>
+            </div>
+            <div class="flexbox flex-1">
+                <!-- START TOP-LEFT TOOLBAR-->
+                <ul class="nav navbar-toolbar">
+                    <li>
+                        <a class="nav-link sidebar-toggler js-sidebar-toggler">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END TOP-LEFT TOOLBAR-->
+                <!-- START TOP-RIGHT TOOLBAR-->
+
+                <ul class="nav navbar-toolbar">
+                    <li class="dropdown dropdown-user">
+                        <a class="nav-link dropdown-toggle link" data-toggle="dropdown">
+                            <span class="mr-2" style="font-size: .9rem;">{{ request.user.username }}</span>
+                            <i class="fal fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-arrow dropdown-menu-right admin-dropdown-menu">
+
+                            <div class="admin-menu-features">
+                                <a class="admin-features-item"><i class="far fa-user fa-2x"></i>
+                                    <span>Perfil</span>
+                                </a>
+                                <a class="admin-features-item"><i class="fas fa-cog fa-2x"></i>
+                                    <span>Configurações</span>
+                                </a>
+                                <a href="{% url 'logout' %}" class="admin-features-item">
+                                    <i class="fal fa-sign-out fa-3x"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- END TOP-RIGHT TOOLBAR-->
+            </div>
+        </header>
+        <!-- END HEADER-->
+        <!-- START SIDEBAR-->
+        {% include 'sidemenu.html' %}
+        <!-- END SIDEBAR-->
+        <div class="content-wrapper">
+
+            {% block content %} {% endblock %}
+
+            <!-- END PAGE CONTENT-->
+            <footer class="page-footer">
+                <div class="font-13">2018 © <b>VP6</b></div>
+                <div class="to-top">
+                    <i class="far fa-arrow-to-top"></i>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- BEGIN PAGA BACKDROPS-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Carregando...</div>
+    </div>
+    <!-- END PAGA BACKDROPS-->
+    <!-- CORE PLUGINS-->
+
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendors/metisMenu/dist/metisMenu.min.js' %}"></script>
+    <script src="{% static 'vendors/datepicker/js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'vendors/datepicker/js/bootstrap-datepicker.pt-BR.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap-select/js/defaults-pt_BR.min.js' %}"></script>
+    <script src="{% static 'vendors/maskMoney/jquery.maskMoney.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery.mask/jquery.mask.min.js' %}"></script>
+    <script src="{% static 'vendors/sweetalert2/sweetalert2.all.min.js' %}"></script>
+
+
+    <!-- CORE SCRIPTS-->
+    <script src="{% static 'js/app.min.js' %}"></script>
+
+    {% block extra_js %}{% endblock %}
+    <script src="{% static 'js/utils.js' %}"></script>
+
+</body>
+
+</html>

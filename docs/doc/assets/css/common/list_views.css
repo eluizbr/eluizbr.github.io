@@ -1,0 +1,72 @@
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+.col {
+    padding: 0;
+}
+
+.ibox {
+    margin: 0;
+    padding: 0;
+}
+
+.ibox .ibox-head {
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+}
+
+.ibox .ibox-head.ibox-head-splitted {
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.ibox .ibox-head .content-left {
+    display: flex;
+}
+
+
+form div.form-group {
+    margin: 0;
+}
+
+.ibox .ibox-body {
+    padding: 1rem 1rem;
+    border: 1px solid #f1ecec;
+}
+
+.ibox-body table {
+    margin: 0;
+    font-size: .8rem;
+}
+
+.ibox-body table thead {
+    background-color: #EBEDEE;
+    border-color: #EBEDEE;
+    color: #485b6f;
+    font-size: 0.9rem;
+}
+
+.ibox .ibox-body table thead tr th {
+    margin: 0;
+    border-right: 1px solid var(--white);
+    padding: 0.35rem;
+    padding-left: .75rem;
+}
+
+.ibox .ibox-body table tbody tr td {
+    padding: .4rem;
+    border: 1px solid #e8e8e8;
+}
+
+
+a.nav-link.dropdown-toggle.link {
+    padding: 1rem 3rem 1rem 1rem;
+}

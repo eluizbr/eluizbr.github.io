@@ -1,0 +1,73 @@
+div.row {
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    color: var(--white) !important;
+    margin: 1rem 0.5rem;
+}
+
+.card.card-painel div.card-body {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+.card div.card-body div.labels {
+    margin-left: 0.5rem;
+}
+
+.card div.card-body div.labels h5 {
+    color: var(--white);
+    font-weight: 400 !important;
+}
+
+.card div.card-body div.labels h6 {
+    color: var(--white);
+    font-weight: 400 !important;
+    font-size: 0.8rem;
+}
+
+.card div.card-body i {
+    float: left;
+}
+
+div.card:hover {}
+
+.cardOrcamento {
+    background-color: #5c9e5c;
+}
+
+.cardOrcamentoAdm {
+    background-color: #475447;
+}
+
+.cardRelatorios {
+    background-color: darkslateblue;
+}
+
+a.admin-features-item>i {
+    color: #71808f;
+}
+
+div.card-body>i {
+    color: #f2f2f2;
+}
+
+i.fa.fa-angle-double-up {
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.box-shadow-transition {
+    transition: box-shadow .2s;
+}
+
+.box-shadow-transition:hover {
+    box-shadow: 2px 3px 15px rgba(5, 8, 0, 0.5);
+    transform: scale(1.008);
+}

@@ -1,0 +1,78 @@
+.modal-content {
+    background-color: #304357;
+    color: var(--white);
+}
+
+.modal-header {
+    display: flex;
+    align-items: baseline;
+    background-color: #EBEDEE;
+    border-color: #EBEDEE;
+    color: #485b6f;
+    border-bottom: 2px solid #e9ecef;
+    padding: .5rem 1rem;
+}
+
+.modal-header button {
+    padding: 0;
+}
+
+.modal-body {
+    background-color: var(--white);
+    color: #34495f;
+    border-bottom: 2px solid #e9ecef;
+    padding: 0.6rem;
+}
+
+.modal-footer {
+    background-color: var(--white);
+    border-color: #EBEDEE;
+    color: #485b6f;
+}
+
+div.cardModal {
+    margin: 1rem 1rem 1.5rem 1rem;
+    background-color: #e8eff5;
+}
+
+div.cardModal:hover {
+    transform: scale(1);
+}
+
+.card-body {
+    color: #34495f;
+}
+
+.card-body .row {
+    margin: 0;
+}
+
+.cardTitle {
+    margin: 0.2rem;
+}
+
+.container {
+    padding: 0;
+}
+
+.container table {
+    margin: 0;
+}
+
+.form-group {
+    padding: 0;
+    padding-right: .5rem;
+}
+
+label {
+    margin: 0;
+}
+
+.label-bold {
+    font-weight: 500;
+}
+
+input.form-control {
+    background-color: var(--bg-light) !important;
+    height: auto !important;
+}

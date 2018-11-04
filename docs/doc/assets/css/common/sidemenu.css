@@ -1,0 +1,17 @@
+i.sidebar-item-icon {
+    margin-right: 0;
+}
+
+span.nav-label {
+    color: #b4bcc8;
+}
+
+i.far.fa-home {
+    color: #868e96;
+    margin-right: 0;
+}
+
+i.far-plus {
+    color: var(--white);
+    margin-right: 0;
+}

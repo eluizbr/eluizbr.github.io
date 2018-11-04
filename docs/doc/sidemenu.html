@@ -1,0 +1,109 @@
+<nav class="page-sidebar" id="sidebar">
+  <div id="sidebar-collapse">
+
+    <ul class="side-menu metismenu">
+      {% if perms.lancamentos %}
+      <li class="heading">ORÇAMENTO</li>
+      <!-- <li>
+          <a><i class="sidebar-item-icon fas fa-usd-square"></i>
+            <span class="nav-label">Pessoal</span><i class="fa fa-angle-left arrow"></i></a>
+          <ul class="nav-2-level collapse">
+            <li>
+              <a href="#">Colaboradores</a>
+            </li>
+            <li>
+              <a href="#">Coligadas</a>
+            </li>
+          </ul>
+        </li> -->
+      <li>
+        <a><i class="sidebar-item-icon fas fa-toolbox"></i>
+          <span class="nav-label">Empresarial</span><i class="fa fa-angle-left arrow"></i></a>
+        <ul class="nav-2-level collapse">
+          <li>
+            <a href="{% url 'lancamentos_list' %}">Lançamentos</a>
+          </li>
+          <li>
+            <a href="{% url 'versoes_list' %}">Versões</a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li>
+        <a><i class="sidebar-item-icon far fa-cubes"></i>
+          <span class="nav-label">Estrutura Orçamentária</span><i class="fa fa-angle-left arrow"></i></a>
+        <ul class="nav-2-level collapse">
+          <li>
+            <a href="{% url 'grupos_list' %}">Grupos</a>
+          </li>
+          <li>
+            <a href="{% url 'pacotes_list' %}">Pacotes</a>
+          </li>
+          <li>
+            <a href="{% url 'conta-contabil_list' %}">Conta Contábil</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a><i class="sidebar-item-icon fas fa-blanket"></i>
+          <span class="nav-label">Relatórios</span><i class="fa fa-angle-left arrow"></i></a>
+        <ul class="nav-2-level collapse">
+          <li>
+            <a href="{% url 'home' %}">DRE Gerencial</a>
+          </li>
+        </ul>
+      </li>
+
+      {% endif %}
+
+      {% if perms.core %}
+      <li class="heading">RELATÓRIOS</li>
+      <li>
+        <a><i class="sidebar-item-icon fas fa-archive"></i>
+          <span class="nav-label">Upload de Arquivos</span><i class="fa fa-angle-left arrow"></i></a>
+        <ul class="nav-2-level collapse">
+          <li>
+            <a href="./modules/upload_relatorios/cmf.html">CMF</a>
+          </li>
+          <li>
+            <a href="./modules/upload_relatorios/epr.html">EPR</a>
+          </li>
+          <li>
+            <a href="./modules/upload_relatorios/dcd.html">DCD</a>
+          </li>
+          <li>
+            <a href="./modules/upload_relatorios/novocontratacao.html">NOVO_CONTRATACAO</a>
+          </li>
+        </ul>
+      </li>
+      {% endif %}
+
+      {% if perms.orcamento_administrativo %}
+      <li class="heading">CONTROLE DE OBRAS</li>
+      <li>
+        <a href="{% url 'modulo_controle_list' %}"><i class="sidebar-item-icon fas fa-toolbox"></i>
+          <span class="nav-label">Controle de Obras</span>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+
+
+    <div class="sidebar-footer">
+      <a class="sidebar-footer-link">
+        <i class="fas fa-bullhorn"></i>
+      </a>
+      <a class="sidebar-footer-link">
+        <i class="far fa-calendar"></i>
+      </a>
+      <a class="sidebar-footer-link">
+        <i class="far fa-comment-alt"></i>
+      </a>
+      <a class="sidebar-footer-link">
+        <i class="fas fa-power-off"></i>
+      </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,18 @@
+<div class="card-footer text-muted d-flex justify-content-center">
+  <div class="pagination">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+      <a class="mr-4" href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-chevron-double-left fa-lg"></i></a>
+      {% endif %}
+
+      <span class="current">
+        Página {{ page_obj.number }} de {{ paginator.num_pages }}
+      </span>
+
+      {% if page_obj.has_next %}
+      <a class="ml-5" href="?page={{ page_obj.next_page_number }}"><i class="fas fa-chevron-double-right fa-lg"></i>
+      </a>
+      {% endif %}
+    </span>
+  </div>
+</div>
